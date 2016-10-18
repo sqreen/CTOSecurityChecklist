@@ -1,24 +1,21 @@
-main {
-  display: inline-block;
-  width: calc(100% - 260px);
-  height: 100vh;
-  vertical-align: top;
-  margin-left: 260px;
-  transition: .3s ease;
+html, body {
+  background: #fff;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  font-family: "BG regular", sans-serif;
+  background-color: $grey-light;
+}
 
-  .main-container {
-    padding: 61px 20px 20px;
-    position: relative;
-    height: 100vh;
-    overflow: auto;
-
-    @include mobile() {
-      padding: 50px 20px 20px;
-    };
-  }
-
-  @include until($desktop) {
-    margin-left: 0;
-    width: 100%;
-  };
+.wrapper {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  position: relative;
+  padding: 0 $gutter;
 }

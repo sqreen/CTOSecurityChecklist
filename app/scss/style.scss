@@ -10,34 +10,12 @@
 
 
 // Design
+@import "design/_reset";
 @import "design/colors";
 @import "design/buttons";
 @import "design/font";
 @import "design/mixin";
-@import "design/animations";
-
-// Bulma
-@import "ressources/bulma/utilities/utilities";
-@import "ressources/bulma/base/base";
-@import "ressources/bulma/elements/elements";
-@import "ressources/bulma/components/components";
-@import "ressources/bulma/layout/layout";
 
 //Pages
 @import "pages/layout";
 @import "pages/home";
-@import "pages/details";
-@import "pages/main";
-@import "pages/auth";
-@import "pages/login";
-@import "pages/onboarding";
-@import "pages/informational_band";
-
-// Elements
-@import "elements/_nav";
-@import "elements/_menu";
-@import "elements/_charts";
-@import "elements/_box";
-@import "elements/_table";
-@import "elements/_label";
-@import "elements/_text";

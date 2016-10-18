@@ -47,24 +47,25 @@ gulp.task('styles', function () {
         .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('scripts', function () {
-    return gulp.src('app/js/**/*.js')
-        .pipe(plumber({
-            errorHandler: function (error) {
-                console.log(error.message);
-                this.emit('end');
-            }
-        }))
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest('app/js/'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest('app/js/'))
-        .pipe(browserSync.reload({stream: true}))
-});
+// gulp.task('scripts', function () {
+//     return gulp.src('app/js/**/*.js')
+//         .pipe(plumber({
+//             errorHandler: function (error) {
+//                 console.log(error.message);
+//                 this.emit('end');
+//             }
+//         }))
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest('app/js/'))
+//         .pipe(rename({suffix: '.min'}))
+//         .pipe(uglify())
+//         .pipe(gulp.dest('app/js/'))
+//         .pipe(browserSync.reload({stream: true}))
+// });
 
 gulp.task('default', ['browser-sync'], function () {
     gulp.watch("app/scss/**/*.scss", ['styles']);
-    gulp.watch("app/js/**/*.js", ['scripts']);
+    gulp.watch("app/js/**/*.js");
+    // gulp.watch("app/js/**/*.js", ['scripts']);
     gulp.watch("*.html", ['bs-reload']);
 });

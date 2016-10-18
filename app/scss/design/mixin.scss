@@ -1,10 +1,20 @@
-@mixin animation($animation...) {
-  -o-animation: $animation;
-  -moz-animation: $animation;
-  -webkit-animation: $animation;
-  animation: $animation;
+// Grid
+$gutter: 20px;
+
+.columns {
+  display: flex;
+  justify-content: space-between;
 }
 
-@mixin content-before($before : ' : ') {
-  content: attr(data-row)  $before;
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc((#{$i} * 100%)/12 - (#{$gutter}/2));
+    flex: none;
+  }
 }
+
+// rem calculator
+@function rem-calc($size) {
+  $remSize: $size / 14px;
+  @return #{$remSize}rem;
+};
