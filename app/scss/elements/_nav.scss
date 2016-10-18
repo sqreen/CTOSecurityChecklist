@@ -1,0 +1,115 @@
+nav {
+  height: 61px;
+  width: 100%;
+  display: block !important;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(151,151,151, 0.16);
+  text-align: right !important;
+  position: fixed !important;
+  left: 0;
+  z-index: 10;
+
+  .item {
+    cursor: pointer;
+    transition: .1s ease;
+    padding: 10px 15px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 41px;
+
+    &.burger {
+      display: none;
+      float: left;
+    }
+
+    &.has-notif {
+      i {
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $red;
+          position: absolute;
+          top: -2px;
+          right: -2px;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: darken(#fff, 3%);
+    }
+
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+      font-size: 1.1em;
+      color: $grey-dark;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
+      font-size: 1em;
+      font-weight: 400;
+      margin-left: 5px;
+    }
+
+    &::before {
+      content: '';
+      width: 1px;
+      height: 20px;
+      background-color: $grey-light;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      left: -17px;
+    }
+
+    &:nth-child(2)::before {
+      display: none;
+    }
+
+    &:last-child {
+      padding-right: 20px;
+    }
+  }
+
+  @include until($desktop) {
+    height: 50px;
+
+    .item {
+      padding: 10px 15px;
+      line-height: 31px;
+
+      &.burger {
+        display: block;
+      }
+
+      i {
+        font-size: 1.3em;
+      }
+
+      span {
+        display: none;
+        margin-left: 5px;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  };
+}
+
+.sub-nav {
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  padding: 10px 1px;
+}

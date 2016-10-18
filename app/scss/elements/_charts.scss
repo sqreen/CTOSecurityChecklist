@@ -1,0 +1,112 @@
+.chart {
+  .chart-name {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .chart-value {
+    display: block;
+    font-weight: 400;
+  }
+
+  .diff {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 3px;
+    border: 1px solid $grey-light;
+    padding: 5px;
+    color: $grey-darker;
+    fill: $grey-darker;
+
+    &.danger {
+      color: $red;
+      fill: $red;
+    }
+
+    &.warning {
+      color: $yellow;
+      fill: $yellow;
+    }
+
+    &.safe {
+      color: $green;
+      fill: $green;
+    }
+
+    &.stable {
+      color: $grey-light;
+      fill: $grey-light;
+    }
+
+    .diff-arrow {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 0;
+
+      &.up svg {
+        transform: rotateZ(90deg);
+      }
+
+      &.down svg {
+        transform: rotateZ(-90deg);
+      }
+
+      &.right {
+        transform: rotateZ(180deg);
+      }
+
+      svg {
+        height: 15px;
+        width: 15px;
+        transition: .2s ease;
+      }
+    }
+
+    .diff-value {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 1.4em;
+      font-weight: 700;
+      transition: .2s ease;
+
+      &::after {
+        content: attr(data-unit);
+        display: inline-block;
+      }
+    }
+
+    .diff-time {
+      display: none;
+      font-size: 0.8em;
+      font-weight: 400;
+      text-align: center;
+      margin: 0 auto;
+      color: $grey-light;
+    }
+  }
+}
+
+.big-number {
+  .bn-value {
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    font-size: 3.5em;
+    padding: .75em 0;
+  }
+
+  &.is-red .bn-value {color: $red}
+  &.is-orange .bn-value {color: $orange}
+  &.is-green .bn-value {color: $green}
+  &.is-grey .bn-value {color: $grey}
+}
+
+.line-chart-ctn {
+  svg {
+      margin: 0px;
+      padding: 0px;
+      height: 190px !important;
+      width: 100%;
+  }
+}

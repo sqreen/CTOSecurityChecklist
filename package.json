@@ -1,0 +1,24 @@
+{
+  "name": "landingapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sqreen",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-imagemin": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "*"
+  }
+}

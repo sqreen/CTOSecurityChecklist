@@ -1,0 +1,24 @@
+.information-band-container {
+
+  .information-band-item {
+    text-align: center;
+    background-color: $white;
+
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: 500;
+      font-size: $size-4;
+    }
+
+    p {
+      padding: 0 8px;
+      font-size: $size-7;
+      color: $grey-dark;
+    }
+
+    @include mobile() {
+      margin-bottom: 10px;
+    }
+  }
+}

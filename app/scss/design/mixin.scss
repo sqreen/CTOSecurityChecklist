@@ -1,0 +1,10 @@
+@mixin animation($animation...) {
+  -o-animation: $animation;
+  -moz-animation: $animation;
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+
+@mixin content-before($before : ' : ') {
+  content: attr(data-row)  $before;
+}

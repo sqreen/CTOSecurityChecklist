@@ -1,0 +1,260 @@
+.details-ctn {
+  .header-detail {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+
+    .left-ctn {
+      flex-grow: 1;
+      padding: 15px 20px 0 0;
+    }
+
+    .right-ctn {
+      width: 200px;
+      padding: 15px 20px;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .event-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      display: block;
+      width: calc(100% - 100px);
+      float: left;
+      color: $grey-darker;
+    }
+
+    .event-status {
+      font-size: 0.9em;
+      display: block;
+      width: calc(100% - 100px);
+      float: left;
+
+      &::before {
+        font-family:'FontAwesome';
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      &.blocked {
+        &::before {
+          content: "\f132";
+          color: $blue-sqreen;
+        }
+      }
+
+      &.ignore {
+        &::before {
+          content: "\f10c";
+          color: $grey-dark;
+        }
+      }
+    }
+
+    .risk-level {
+      display: block;
+      text-align: right;
+      float: right;
+
+      svg {
+        width: 25px;
+        display: inline-block;
+        fill: $grey-light;
+      }
+
+      span {
+        display: block;
+        font-size: 0.8em;
+        line-height: 0.5;
+        color: $grey-dark;
+      }
+
+      &.high {
+        .one, .two, .three {
+          fill: $grey-dark;
+        }
+      }
+      &.medium {
+        .one, .two {
+          fill: $grey-dark;
+        }
+      }
+      &.low {
+        .one {
+          fill: $grey-dark;
+        }
+      }
+    }
+
+    @include mobile() {
+      display: block;
+
+      .risk-level {
+        display: none;
+      }
+
+      .left-ctn {
+        padding: 15px 0 0;
+      }
+
+      .right-ctn {
+        width: 100%;
+        text-align: left;
+        padding: 25px 0 0;
+        border-left: none;
+
+        a {
+          color: #fff;
+        }
+      }
+
+      .event-title {
+        font-size: 1.4em;
+        width: 100%;
+        float: none;
+        margin-bottom: 5px;
+      }
+
+      .event-status {
+        font-size: 1em;
+        width: 100%;
+        float: none;
+      }
+    };
+  }
+
+  .content-detail {
+    padding-top: 20px;
+
+    .backtrace {
+      display: block;
+      margin-bottom: 30px;
+
+      &.open {
+        .head-bt {
+          .top-bar {
+            background-color: $grey-lighter;
+            margin-bottom: 0;
+
+            .count-bt {
+              &::before {
+                content: "Hide the ";
+              }
+            }
+
+            i {
+              transform: rotateZ(180deg);
+            }
+          }
+
+          .line-bt {
+            display: none;
+            opacity: 0;
+
+            .label {
+              top: 10px;
+            }
+          }
+        }
+
+        .list-bt {
+          display: block;
+          opacity: 1;
+        }
+      }
+
+      .head-bt {
+        .top-bar {
+          padding: 9px 10px;
+          border-radius: $radius;
+          border: 1px solid $grey-light;
+          cursor: pointer;
+          display: block;
+          margin-bottom: 20px;
+          transition: .2s ease;
+
+          &:hover {
+            background-color: $grey-lighter;
+          }
+
+          .count-bt {
+            display: inline-block;
+            margin: 0;
+            font-size: 0.9em;
+
+            &::before {
+              content: "Show the ";
+            }
+
+            &::after {
+              content: " elements";
+            }
+          }
+
+          i {
+            transition: .2s ease;
+          }
+        }
+
+        .line-bt {
+          padding-left: 10px;
+        }
+      }
+
+      .line-bt {
+        display: block;
+        margin-bottom: 10px;
+        transition: .2s ease;
+        font-size: 1em;
+        font-weight: 500;
+        position: relative;
+        padding-right: 100px;
+
+        .label {
+          position: absolute;
+          right: 10px;
+        }
+
+        .method-bt {
+          color: $grey-dark;
+          font-weight: 600;
+          display: inline;
+        }
+
+        .url-bt {
+          color: $green;
+          word-break: break-all;
+          display: inline;
+          font-weight: 600;
+        }
+
+        .line {
+          font-size: 0.9em;
+          color: $grey;
+          display: inline;
+        }
+      }
+
+      .list-bt {
+        border-radius: $radius;
+        border: 1px solid $grey-light;
+        display: none;
+        transition: .2s ease;
+
+        .line-bt {
+          padding: 10px 50px 10px 15px;
+          margin: 0;
+          border-bottom: 1px solid $grey-light;
+
+          &:hover {
+            background-color: $grey-lighter;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.div-table {
+  .row {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 10px;
+    border-bottom: 1px solid $grey-light;
+
+    &.thead {
+      border-bottom: 2px solid $grey-light;
+
+      &:hover {
+        border-width: 2px;
+      }
+
+      div[class^=col] {
+        font-weight: 600;
+        color: $grey-dark;
+      }
+    }
+
+    &:hover {
+      border-bottom: 1px solid $grey-light;
+      background-color: $grey-lighter;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    // loop for set column width
+    @for $i from 1 through 12 {
+      .col-#{$i} {
+        width: ($i * 100%)/12;
+        float: left;
+        padding: 8px 10px;
+        color: $grey-dark;
+        word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .no-ellipsis {
+      overflow: auto !important;
+      text-overflow: clip !important;
+      white-space: normal !important;
+      word-break: normal !important;
+    }
+
+    &.fix-col > div:first-child {
+      width: auto !important;
+      min-width: 100px;
+    }
+
+    @include mobile() {
+      padding: 10px;
+
+      &:first-child {
+        padding-top: 10px;
+      }
+
+      &.thead {
+        display: none;
+      }
+
+      div[class^=col] {
+        width: 100%;
+        float: none;
+        color: $grey-dark;
+        word-break: normal;
+        padding: 8px 0;
+
+        &::before {
+          display: inline-block;
+          vertical-align: baseline;
+          font-weight: bold;
+          margin-right: 3px;
+        }
+
+        // Before element for create label on each row
+        &:nth-child(1)::before {
+          @include content-before();
+        }
+        &:nth-child(2)::before {
+          @include content-before();
+        }
+        &:nth-child(3)::before {
+          @include content-before();
+        }
+        &:nth-child(4)::before {
+          @include content-before();
+        }
+        &:nth-child(5)::before {
+          @include content-before();
+        }
+        &:nth-child(6)::before {
+          @include content-before();
+        }
+      }
+    }
+  ;
+  }
+}

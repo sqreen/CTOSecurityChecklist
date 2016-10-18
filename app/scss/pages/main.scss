@@ -1,0 +1,13 @@
+$prefix: 'main_';
+
+.#{$prefix}logo-small {
+  width: 130px;
+
+  @include mobile() {
+    width: 80px;
+  }
+}
+
+.blinking-white {
+  @include animation(1s blink step-end infinite);
+}
