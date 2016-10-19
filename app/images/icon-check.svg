@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="13px" height="11px" viewBox="0 0 13 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
-    <title>8902AE48-BE6B-4D31-A5D1-5B5E59DC718D</title>
-    <desc>Created with sketchtool.</desc>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-        <g id="cto-security-checklist" transform="translate(-595.000000, -522.000000)" stroke-width="3" stroke="#9012FE">
-            <polyline id="icon-check" points="598 528.439382 600.245714 530.732304 605.86 525"></polyline>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(2.000000, 2.000000)" stroke-width="3">
+            <polyline id="icon-check" stroke="#9012FE" points="6 11.4015441 8.87394923 14.3359077 16.0588236 7"></polyline>
+            <circle id="Oval" stroke="#CBCBCB" cx="11" cy="11" r="11"></circle>
         </g>
     </g>
 </svg>

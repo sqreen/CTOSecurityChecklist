@@ -1,6 +1,5 @@
 html, body {
-  background: #fff;
-  font-size: 16px;
+  font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -8,7 +7,11 @@ html, body {
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
   font-family: "BG regular", sans-serif;
-  background-color: $grey-light;
+  background-color: $white;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .wrapper {
@@ -17,5 +20,12 @@ html, body {
   width: 100%;
   max-width: 960px;
   position: relative;
-  padding: 0 $gutter;
+
+  @media screen and (max-width: 960px) {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
 }

@@ -1,18 +1,325 @@
-header {
-  margin-top: 165px;
+// General typo
+*::selection {
+  background-color: $violet;
+  color: $white;
+}
 
-  div[class^=col] {
-    display: flex;
+.fixed {
+  position: fixed;
+  top: 0;
+  left: calc((100vw/2) - (960px/2));
+  padding-left: 20px;
+  width: 280px;
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    position: relative;
+    left: 0;
+    padding-left: 0;
+  }
+}
+
+.col-8 {
+  padding-right: 20px;
+
+  @media screen and (max-width: 960px) {
+  	padding-right: 0;
+  }
+}
+
+h2 {
+  font-family: "BG medium", sans-serif;
+	font-size: rem-calc(38px);
+	line-height: 0.9;
+	color: $black;
+  display: block;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 960px) {
+  	font-size: rem-calc(24px);
+  	line-height: 1.5;
+    margin-bottom: 30px;
+  }
+}
+
+h3 {
+  font-family: "BG bold";
+	font-size: rem-calc(13px);
+	line-height: 3.1;
+	color: $grey-light;
+  text-transform: uppercase;
+}
+
+.logo {
+  margin: 13vh 0 7.5vh;
+
+  @media screen and (max-width: 960px) {
+    width: 136px;
+    margin: 30px 0;
+  }
+}
+
+.description {
+  font-family: "BG regular", sans-serif;
+  font-size: rem-calc(28px);
+  line-height: 1.3;
+  color: $grey;
+  margin-top: 11vh;
+
+  @media screen and (max-width: 960px) {
+    margin: 30px auto;
+    font-size: rem-calc(20px);
+	  line-height: 1.4;
+    margin-top: 0;
+  }
+}
+
+.filter-bar {
+  margin: 40px 0;
+
+  h3 {
+    margin-right: 20px;
+    display: inline-block;
   }
 
-  img {
-    align-self: flex-end;
+  ul {
+    display: inline-block;
+
+    li {
+      font-family: "BG bold", sans-serif;
+    	font-size: rem-calc(16px);
+    	color: $grey-light;
+      display: inline-block;
+      padding: 7px 14px;
+      margin: 0 10px;
+      transition: .2s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $violet;
+      }
+
+      &.selected {
+        background-color: $violet;
+        border-radius: 50px;
+        color: $white
+      }
+    }
   }
 
-  p {
-    font-family: "BG regular", sans-serif;
-  	font-size: rem-calc(30px);
-  	line-height: 1.3;
-  	color: $grey;
+  @media screen and (max-width: 960px) {
+    h3 {
+      display: none;
+    }
+  }
+}
+
+nav {
+  li {
+    display: block;
+
+    &.selected a {
+      color: $violet;
+    }
+
+    a {
+      font-family: "BG bold", sans-serif;
+    	font-size: rem-calc(19px);
+    	line-height: 1.9;
+    	letter-spacing: 0.1px;
+    	color: $grey-light;
+      display: inline-block;
+      text-decoration: none;
+      transition: .2s ease;
+
+      &:hover {
+        color: $violet;
+      }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+}
+
+.social {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+
+    a {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+}
+
+.checklist {
+  margin-bottom: 40px;
+  border: solid 1px $grey-lighter;
+
+  li {
+    width: 100%;
+
+    &.expend {
+      .body {
+        display: block;
+      }
+
+      .arrow {
+        transform: rotateZ(180deg);
+      }
+    }
+
+    .header {
+      background-color: $white;
+      box-shadow: inset 0px -1px 0px $grey-lighter;
+      font-size: 0;
+
+      &:hover {
+        background-color: darken($white, 2%);
+      }
+
+      .check {
+        height: 61px;
+        width: 61px;
+        line-height: 61px;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+
+        &.checked {
+          &:hover {
+            circle {
+              stroke: $violet;
+            }
+          }
+
+          path {
+            stroke-dashoffset: 0;
+          }
+
+          circle {
+            stroke: $violet;
+          }
+        }
+
+        svg {
+          display: inline-block;
+          vertical-align: middle;
+
+          path {
+            stroke-dasharray: 50;
+            stroke-dashoffset: 50;
+            transition: .2s ease;
+          }
+
+          circle {
+            stroke: $grey-lighter;
+            transition: .2s ease;
+          }
+        }
+      }
+
+      .expend-bar {
+        width: calc(100% - 120px);
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        padding: 20px 0;
+
+        &.checked p {
+          color: $grey-light;
+        }
+
+        p {
+          font-family: "BG medium", sans-serif;
+        	font-size: rem-calc(21px);
+        	line-height: 1;
+        	color: $black;
+          display: inline;
+          transition: .2s ease;
+          margin-right: 5px;
+        }
+
+        .category {
+          font-family: "BG light", sans-serif;
+          font-size: rem-calc(16px);
+          font-style: italic;
+          line-height: 1.9;
+          color: $grey-light;
+          display: inline;
+          white-space: nowrap;
+        }
+      }
+
+      .btn {
+        padding: 17px 20px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+
+        .arrow {
+          display: inline-block;
+          vertical-align: middle;
+          transition: .2s ease;
+        }
+      }
+    }
+
+    .body {
+      background-color: $grey-lighter2;
+      padding: 31px 33px;
+      display: none;
+      box-shadow: inset 0px -1px 0px $grey-lighter;
+
+      p {
+        font-family: "BG regular", sans-serif;
+      	font-size: rem-calc(20px);
+      	line-height: 1.4;
+      	color: $grey;
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      a {
+        font-family: "BG medium", sans-serif;
+      	font-size: rem-calc(21px);
+      	line-height: 1.4;
+      	color: $violet;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      @media screen and (max-width: 960px) {
+        padding: 20px 23px;
+        text-align: left;
+
+        p {
+        	font-size: rem-calc(17px);
+          margin-bottom: 10px;
+        }
+
+        a {
+        	font-size: rem-calc(17px);
+        }
+      }
+    }
   }
 }

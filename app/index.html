@@ -10,86 +10,286 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="columns">
-        <div class="col-4">
+      <div class="columns">
+        <div class="fixed">
           <img src="/images/logo-csc.svg" alt="CTO Security Checklist" class="logo">
-        </div>
-        <div class="col-8">
-          <p>This list is a basic checklist all companies should follow. It is not exhaustive and by nature incomplete, since your security depends on your assets.</p>
-        </div>
-      </header>
-      <main>
-        <div class="filter-bar columns">
-          <div class="col-4"></div>
-          <div class="col-8">
-            <h3>View</h3>
+          <nav>
             <ul>
-              <li>All</li>
-              <li>Seed</li>
-              <li>Series A</li>
-              <li>Above</li>
+              <li class="selected"><a href="#company">Your company</a></li>
+              <li><a href="#employees">Your employees</a></li>
+              <li><a href="#yourself">Yourself</a></li>
+              <li><a href="#infrasructure">Your infrasructure</a></li>
+              <li><a href="#code">Your code</a></li>
+              <li><a href="#application">Your application</a></li>
+              <li><a href="#users">Your users</a></li>
+            </ul>
+          </nav>
+          <div class="social">
+            <h3>Share on</h3>
+            <ul>
+              <li>
+                <a href="">
+                  <img src="/images/icon-linkedin.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="/images/icon-twitter.svg" alt="">
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="/images/icon-facebook.svg" alt="">
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-        <div class="columns">
-          <div class="col-4">
-            <nav>
-              <a href="">Your company</a>
-              <a href="">Your employees</a>
-              <a href="">Yourself</a>
-              <a href="">Your infrasructure</a>
-              <a href="">Your code</a>
-              <a href="">Your application</a>
-              <a href="">Your users</a>
-            </nav>
-            <div class="social">
-              <h3>Share on</h3>
-              <ul>
-                <li>
-                  <a href="">
-                    <img src="/images/icon-linkedin.svg" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="/images/icon-twitter.svg" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="/images/icon-facebook.svg" alt="">
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-8">
-            <h2>Your company</h2>
+        <div class="col-8">
+          <p class="description">This list is a basic checklist all companies should follow. It is not exhaustive and by nature incomplete, since your security depends on your assets.</p>
+          <div class="filter-bar">
+            <h3>View</h3>
             <ul>
-              <li data-category="seed">
+              <li class="all selected">All</li>
+              <li class="seed">Seed</li>
+              <li class="seriesa">Series A</li>
+              <li class="above">Above</li>
+            </ul>
+          </div>
+          <div id="company">
+            <h2>Your company</h2>
+            <ul class="checklist">
+              <li class="seed">
                 <div class="header">
-                  <div class="check"></div>
-                  <p>Ensure your domain names are secured</p>
-                  <span class="category">Seed</span>
-                  <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Ensure your domain names are secured</p>
+                    <span class="category">Seed</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>Domain names should be renewed regularly. If you bought it from a third party, you should also make sure the authoritative configured name server is your own.</p>
+                </div>
+              </li>
+              <li class="seriesa">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Have a public security policy</p>
+                    <span class="category">Series A</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
                 </div>
                 <div class="body">
                   <p>This is a page on your corporate website, describing how you plan to respond to external bug reports. You should advise you support responsible disclosure.</p>
-                  <a href="">https://www.sqreen.io/security.html</a>
-                  <a href="">https://www.airbnb.com/security</a>
-                  <a href="">https://www.apple.com/support/security</a>
+                  <a href="https://www.airbnb.com/security" target="_blank">https://www.airbnb.com/security</a>
+                  <a href="https://www.apple.com/support/security/" target="_blank">https://www.apple.com/support/security/</a>
+                </div>
+              </li>
+              <li class="above">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Have an internal security policy</p>
+                    <span class="category">Above</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>This is a short document stating of the security requirements in your company, and defining who are the actors of the security.</p>
+                  <a href="https://www.sans.org/reading-room/whitepapers/policyissues/creating-information-systems-security-policy-534" target="_blank">https://www.sans.org/reading-room/whitepapers/policyissues/creating-information-systems-security-policy-534</a>
+                </div>
+              </li>
+              <li class="seriesa">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Use a bug bounty program</p>
+                    <span class="category">Series A</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>A bug bounty program will allow external people to report you vulnerabilities for money. You need some security aware people inside your company to balance the reports you will get (and nothing is more alarming than a security report).</p>
+                  <a href="https://bountyfactory.io/" target="_blank">https://bountyfactory.io/</a>
+                  <a href="https://hackerone.com/" target="_blank">https://hackerone.com/</a>
+                </div>
+              </li>
+              <li class="seed">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Be honest and transparent about the data you may collect</p>
+                    <span class="category">Seed</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>In case of a breach, people will disclose the data they gathered. Your customers need to be aware of what data you're storing.</p>
+                </div>
+              </li>
+              <li class="seed">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Make sure your critical services are secured</p>
+                    <span class="category">Seed</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>Many companies rely on Google Apps, Slack, Wordpress… these services all have defaults that can be improved in order to help you secure them.</p>
+                  <a href="https://blog.trailofbits.com/2015/07/07/how-to-harden-your-google-apps/" target="_blank">https://blog.trailofbits.com/2015/07/07/how-to-harden-your-google-apps/</a>
+                  <a href="https://codex.wordpress.org/Hardening_WordPress" target="_blank">https://codex.wordpress.org/Hardening_WordPress</a>
+                </div>
+              </li>
+              <li class="above">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Make an inventory of your company’s assets</p>
+                    <span class="category">Above</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>The awareness of your company’s assets enables you to monitor the points that need the most security or attention.</p>
+                </div>
+              </li>
+              <li class="above">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Have a security incident response plan</p>
+                    <span class="category">Above</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>This will allow whoever is in charge at the time of breach to communicate accordingly about this incident, and will allow the fastest response in technical / communication terms.</p>
+                </div>
+              </li>
+              <li class="seriesa">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Do not share Wifi</p>
+                    <span class="category">Series A</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>Sharing Wifi networks with guests or neighbors may give them the opportunity to gather information on your network, and to access IP granted resources. Use a guest dedicated Wifi network.</p>
                 </div>
               </li>
             </ul>
+          </div>
+          <div id="employees">
             <h2>Your employees</h2>
+          </div>
+          <div id="yourself">
             <h2>Yourself</h2>
+          </div>
+          <div id="infrasructure">
             <h2>Your infrasructure</h2>
+          </div>
+          <div id="code">
             <h2>Your code</h2>
+          </div>
+          <div id="application">
             <h2>Your application</h2>
+          </div>
+          <div id="users">
             <h2>Your users</h2>
           </div>
         </div>
-      </main>
+      </div>
     </div>
+    <!-- Scripts -->
+    <script type="text/javascript" src="/js/vendors/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/vendors/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>
