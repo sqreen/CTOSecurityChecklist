@@ -69,3 +69,19 @@ $('.btn, .expend-bar').click(function(){
     $grid.isotope();
   }
 });
+
+// Open/close menu mobile
+//========================================
+$('.burger').click(function(){
+  $('.mobile-menu').show();
+  setTimeout(function(){
+    $('.mobile-menu').addClass('open');
+  }, 100);
+});
+$('.close, .mobile-menu .nav a').click(function(){
+  $('.mobile-menu').removeClass('open');
+
+  setTimeout(function(){
+    $('.mobile-menu').hide();
+  }, 600);
+});

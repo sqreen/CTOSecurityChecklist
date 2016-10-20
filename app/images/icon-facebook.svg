@@ -1,12 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="12px" height="25px" viewBox="0 0 12 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
-    <title>C185A996-7938-4FF2-9A34-7C63DDF86714</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="cto-security-checklist" transform="translate(-346.000000, -749.000000)" fill="#787878">
-            <path d="M357.630769,757.095282 L353.669738,757.095282 L353.669738,754.500528 C353.669738,753.526072 354.316352,753.298888 354.771262,753.298888 L357.566522,753.298888 L357.566522,749.015008 L353.716887,749 C349.443429,749 348.470917,752.195057 348.470917,754.239707 L348.470917,757.095282 L346,757.095282 L346,761.509056 L348.470917,761.509056 L348.470917,774 L353.669738,774 L353.669738,761.509056 L357.176896,761.509056 L357.630769,757.095282" id="icon-facebook"></path>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="25">
+  <path fill="#787878" fill-rule="evenodd" d="M11.63 8.095H7.67V5.5c0-.974.646-1.2 1.1-1.2h2.797V.014L7.717 0C3.443 0 2.47 3.195 2.47 5.24v2.855H0v4.414h2.47V25h5.2V12.51h3.507l.454-4.415"/>
 </svg>

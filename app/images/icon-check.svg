@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
-    <title>Group</title>
-    <desc>Created with Sketch.</desc>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>065AD787-DC4B-4462-8C87-43053EBEF0AA</title>
+    <desc>Created with sketchtool.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" transform="translate(2.000000, 2.000000)" stroke-width="3">
-            <polyline id="icon-check" stroke="#9012FE" points="6 11.4015441 8.87394923 14.3359077 16.0588236 7"></polyline>
-            <circle id="Oval" stroke="#CBCBCB" cx="11" cy="11" r="11"></circle>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="cto-security-checklist-mobile-menu" transform="translate(-274.000000, -461.000000)" stroke-width="3" stroke="#FFFFFF">
+            <polyline id="icon-check" points="277 468.752123 280.102857 471.920206 287.86 464"></polyline>
         </g>
     </g>
 </svg>
