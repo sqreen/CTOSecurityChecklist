@@ -8,6 +8,7 @@ html, body {
   text-rendering: optimizeLegibility;
   font-family: "BG regular", sans-serif;
   background-color: $white;
+  position: relative;
 
   &::-webkit-scrollbar {
     display: none;

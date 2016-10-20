@@ -15,7 +15,11 @@
 @import "design/buttons";
 @import "design/font";
 @import "design/mixin";
+@import "design/_title";
 
 //Pages
 @import "pages/layout";
 @import "pages/home";
+
+// Elements
+@import "elements/github-corner";

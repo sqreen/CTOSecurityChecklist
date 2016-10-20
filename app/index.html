@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="/css/style.min.css">
   </head>
   <body>
+    <a href="" class="github-corner" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 250 250" fill="#fff">
+        <path d="M0 0l115 115h15l12 27 108 108V0z" fill="#9013fe"/>
+        <path class="octo-arm" d="M128 109c-15-9-9-19-9-19 3-7 2-11 2-11-1-7 3-2 3-2 4 5 2 11 2 11-3 10 5 15 9 16" style="-webkit-transform-origin: 130px 106px; transform-origin: 130px 106px"/>
+        <path class="octo-body" d="M115 115s4 2 5 0l14-14c3-2 6-3 8-3-8-11-15-24 2-41 5-5 10-7 16-7 1-2 3-7 12-11 0 0 5 3 7 16 4 2 8 5 12 9s7 8 9 12c14 3 17 7 17 7-4 8-9 11-11 11 0 6-2 11-7 16-16 16-30 10-41 2 0 3-1 7-5 11l-12 11c-1 1 1 5 1 5z"/>
+      </svg>
+    </a>
     <div class="mobile-menu">
       <img src="/images/cross.svg" alt="" class="close">
       <ul class="nav">
@@ -125,8 +132,7 @@
           <p class="description">This list is a basic checklist all companies should follow. It is not exhaustive and by nature incomplete, since your security depends on your assets.</p>
           <div class="filter-bar">
             <h3>View</h3>
-            <ul>
-              <li class="all selected">All</li>
+            <ul class="selected-one">
               <li class="seed">Seed</li>
               <li class="seriesa">Series A</li>
               <li class="above">Above</li>
@@ -155,81 +161,6 @@
                 </div>
                 <div class="body">
                   <p>Domain names should be renewed regularly. If you bought it from a third party, you should also make sure the authoritative configured name server is your own.</p>
-                </div>
-              </li>
-              <li class="seriesa">
-                <div class="header">
-                  <div class="check">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
-                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
-                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
-                        <circle cx="11" cy="11" r="11"/>
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="expend-bar">
-                    <p>Have a public security policy</p>
-                    <span class="category">Series A</span>
-                  </div>
-                  <div class="btn">
-                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
-                  </div>
-                </div>
-                <div class="body">
-                  <p>This is a page on your corporate website, describing how you plan to respond to external bug reports. You should advise you support responsible disclosure.</p>
-                  <ul>
-                    <li><a href="https://www.airbnb.com/security" target="_blank">https://www.airbnb.com/security</a></li>
-                    <li><a href="https://www.apple.com/support/security/" target="_blank">https://www.apple.com/support/security/</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="above">
-                <div class="header">
-                  <div class="check">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
-                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
-                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
-                        <circle cx="11" cy="11" r="11"/>
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="expend-bar">
-                    <p>Have an internal security policy</p>
-                    <span class="category">Above</span>
-                  </div>
-                  <div class="btn">
-                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
-                  </div>
-                </div>
-                <div class="body">
-                  <p>This is a short document stating of the security requirements in your company, and defining who are the actors of the security.</p>
-                  <a href="https://www.sans.org/reading-room/whitepapers/policyissues/creating-information-systems-security-policy-534" target="_blank">https://www.sans.org/reading-room/whitepapers/policyissues/creating-information-systems-security-policy-534</a>
-                </div>
-              </li>
-              <li class="seriesa">
-                <div class="header">
-                  <div class="check">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
-                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
-                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
-                        <circle cx="11" cy="11" r="11"/>
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="expend-bar">
-                    <p>Use a bug bounty program</p>
-                    <span class="category">Series A</span>
-                  </div>
-                  <div class="btn">
-                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
-                  </div>
-                </div>
-                <div class="body">
-                  <p>A bug bounty program will allow external people to report you vulnerabilities for money. You need some security aware people inside your company to balance the reports you will get (and nothing is more alarming than a security report).</p>
-                  <ul>
-                    <li><a href="https://bountyfactory.io/" target="_blank">https://bountyfactory.io/</a></li>
-                    <li><a href="https://hackerone.com/" target="_blank">https://hackerone.com/</a></li>
-                  </ul>
                 </div>
               </li>
               <li class="seed">
@@ -280,6 +211,80 @@
                   </ul>
                 </div>
               </li>
+              <li class="seriesa">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Have a public security policy</p>
+                    <span class="category">Series A</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>This is a page on your corporate website, describing how you plan to respond to external bug reports. You should advise you support responsible disclosure.</p>
+                  <ul>
+                    <li><a href="https://www.airbnb.com/security" target="_blank">https://www.airbnb.com/security</a></li>
+                    <li><a href="https://www.apple.com/support/security/" target="_blank">https://www.apple.com/support/security/</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="seriesa">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Use a bug bounty program</p>
+                    <span class="category">Series A</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>A bug bounty program will allow external people to report you vulnerabilities for money. You need some security aware people inside your company to balance the reports you will get (and nothing is more alarming than a security report).</p>
+                  <ul>
+                    <li><a href="https://bountyfactory.io/" target="_blank">https://bountyfactory.io/</a></li>
+                    <li><a href="https://hackerone.com/" target="_blank">https://hackerone.com/</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="seriesa">
+                <div class="header">
+                  <div class="check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                      <g fill="none" fill-rule="evenodd" stroke-width="3" transform="translate(2 2)">
+                        <path stroke="#9012FE" d="M6 11.402l2.874 2.934L16.06 7"/>
+                        <circle cx="11" cy="11" r="11"/>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="expend-bar">
+                    <p>Do not share Wifi</p>
+                    <span class="category">Series A</span>
+                  </div>
+                  <div class="btn">
+                    <img src="/images/arrow-bottom.svg" alt="" class="arrow">
+                  </div>
+                </div>
+                <div class="body">
+                  <p>Sharing Wifi networks with guests or neighbors may give them the opportunity to gather information on your network, and to access IP granted resources. Use a guest dedicated Wifi network.</p>
+                </div>
+              </li>
               <li class="above">
                 <div class="header">
                   <div class="check">
@@ -324,7 +329,7 @@
                   <p>This will allow whoever is in charge at the time of breach to communicate accordingly about this incident, and will allow the fastest response in technical / communication terms.</p>
                 </div>
               </li>
-              <li class="seriesa">
+              <li class="above">
                 <div class="header">
                   <div class="check">
                     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
@@ -335,15 +340,16 @@
                     </svg>
                   </div>
                   <div class="expend-bar">
-                    <p>Do not share Wifi</p>
-                    <span class="category">Series A</span>
+                    <p>Have an internal security policy</p>
+                    <span class="category">Above</span>
                   </div>
                   <div class="btn">
                     <img src="/images/arrow-bottom.svg" alt="" class="arrow">
                   </div>
                 </div>
                 <div class="body">
-                  <p>Sharing Wifi networks with guests or neighbors may give them the opportunity to gather information on your network, and to access IP granted resources. Use a guest dedicated Wifi network.</p>
+                  <p>This is a short document stating of the security requirements in your company, and defining who are the actors of the security.</p>
+                  <a href="https://www.sans.org/reading-room/whitepapers/policyissues/creating-information-systems-security-policy-534" target="_blank">https://www.sans.org/reading-room/whitepapers/policyissues/creating-information-systems-security-policy-534</a>
                 </div>
               </li>
             </ul>

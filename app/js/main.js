@@ -1,29 +1,40 @@
 // Isotope filtering
 //========================================
 var $grid = $('.checklist').isotope();
-// Show all item
-$('.filter-bar .all').on( 'click', function() {
-  $('.filter-bar li').removeClass('selected');
-  $(this).addClass('selected');
-  $grid.isotope({ filter: '*' })
-});
+$grid.isotope({
+  transitionDuration: 0,
+  filter: ".seed"
+})
+
 // Show seed items
 $('.filter-bar .seed').on( 'click', function() {
   $('.filter-bar li').removeClass('selected');
-  $(this).addClass('selected');
-  $grid.isotope({ filter: ".seed" });
+  $('.filter-bar ul').removeClass();
+  $(this).parent().addClass('selected-one');
+  $grid.isotope({
+    transitionDuration: 300,
+    filter: ".seed"
+  });
 });
 // Show seriesa items
 $('.filter-bar .seriesa').on( 'click', function() {
   $('.filter-bar li').removeClass('selected');
-  $(this).addClass('selected');
-  $grid.isotope({ filter: ".seriesa" });
+  $('.filter-bar ul').removeClass();
+  $(this).parent().addClass('selected-two');
+  $grid.isotope({
+    transitionDuration: 300,
+    filter: ".seriesa, .seed"
+  });
 });
-// Show above items
+// Show all item
 $('.filter-bar .above').on( 'click', function() {
   $('.filter-bar li').removeClass('selected');
-  $(this).addClass('selected');
-  $grid.isotope({ filter: ".above" });
+  $('.filter-bar ul').removeClass();
+  $(this).parent().addClass('selected-three');
+  $grid.isotope({
+    transitionDuration: 300,
+    filter: '*'
+  })
 });
 
 // Smooth scrolling
