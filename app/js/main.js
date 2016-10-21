@@ -95,3 +95,14 @@ $('.close, .mobile-menu .nav a').click(function(){
     $('.mobile-menu').hide();
   }, 600);
 });
+
+// Open share links in a popup
+//========================================
+$('.social a, .social-mob a').click(function(e){
+  e.preventDefault();
+  function mypopup(link) {
+    mywindow = window.open(link, "Share it!", "location=1,status=1,scrollbars=1,  width=900,height=700");
+    mywindow.moveTo(window.innerWidth/4, 100);
+  }
+  mypopup($(this).attr('href'));
+});

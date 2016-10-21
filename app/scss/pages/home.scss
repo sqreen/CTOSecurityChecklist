@@ -359,6 +359,10 @@ nav {
       	color: $grey;
         display: block;
         margin-bottom: 15px;
+
+        a {
+          word-break: normal !important;
+        }
       }
 
       a {

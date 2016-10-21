@@ -10,9 +10,9 @@ html, body {
   background-color: $white;
   position: relative;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
 }
 
 .wrapper {
