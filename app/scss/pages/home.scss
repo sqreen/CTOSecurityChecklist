@@ -367,6 +367,7 @@ nav {
       	line-height: 1.4;
       	color: $violet;
         text-decoration: none;
+        word-break: break-all;
 
         &:hover {
           text-decoration: underline;
@@ -487,13 +488,21 @@ nav {
   background-color: $violet;
   text-align: center;
   overflow: auto;
-  clip-path: circle(0px at 57px 55px);
-  transition: clip-path .4s ease, opacity .5s ease;
   opacity: 0;
+  transition: .2s ease;
+
+  @supports ( clip-path: fill-box ) {
+    clip-path: circle(0px at 57px 55px);
+    transition: clip-path .4s ease, opacity .5s ease;
+  }
 
   &.open {
-    clip-path: circle(1000px at 57px 55px);
     opacity: 1;
+
+    @supports ( clip-path: fill-box ) {
+      clip-path: circle(0px at 57px 55px);
+      transition: clip-path .4s ease, opacity .5s ease;
+    }
   }
 
   .close {

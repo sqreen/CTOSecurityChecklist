@@ -8,13 +8,11 @@
 
 @charset "utf-8";
 
-
 // Design
 @import "design/_reset";
-@import "design/colors";
-@import "design/buttons";
-@import "design/font";
-@import "design/mixin";
+@import "design/_colors";
+@import "design/_font";
+@import "design/_mixin";
 @import "design/_title";
 
 //Pages

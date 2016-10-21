@@ -2,7 +2,6 @@
 //========================================
 var $grid = $('.checklist').isotope();
 $grid.isotope({
-  transitionDuration: 0,
   filter: "*"
 })
 
