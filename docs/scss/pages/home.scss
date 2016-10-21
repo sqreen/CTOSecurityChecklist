@@ -9,7 +9,7 @@
   top: 0;
   left: calc((100vw/2) - (960px/2));
   padding-left: 20px;
-  width: 280px;
+  width: 190px;
 
   @media screen and (max-width: 960px) {
     width: 100%;
@@ -173,7 +173,7 @@ nav {
   li {
     display: block;
 
-    &.selected a {
+    &.active a {
       color: $violet;
     }
 

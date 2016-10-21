@@ -262,7 +262,7 @@ html, body {
   top: 0;
   left: calc((100vw/2) - (960px/2));
   padding-left: 20px;
-  width: 280px; }
+  width: 190px; }
   @media screen and (max-width: 960px) {
     .fixed {
       width: 100%;
@@ -371,7 +371,7 @@ html, body {
 
 nav li {
   display: block; }
-  nav li.selected a {
+  nav li.active a {
     color: #9013fe; }
   nav li a {
     font-family: "BG bold", sans-serif;

@@ -40,8 +40,8 @@ $('.filter-bar .above').on( 'click', function() {
 //========================================
 $('nav a').click(function(e){
   e.preventDefault();
-  $('nav li').removeClass('selected');
-  $(this).parent().addClass('selected');
+  $('nav li').removeClass('active');
+  $(this).parent().addClass('active');
   var target = $(this).attr('href');
 
   $('html, body').animate({
@@ -106,3 +106,17 @@ $('.social a, .social-mob a').click(function(e){
   }
   mypopup($(this).attr('href'));
 });
+
+// Scrollspy
+//========================================
+$('.scrollspy').on('scrollSpy:enter', function() {
+    var enterId = $(this).attr('id');
+    $('nav').find('a[href$='+enterId+']').parent().addClass('active');
+});
+
+$('.scrollspy').on('scrollSpy:exit', function() {
+    var exitId = $(this).attr('id');
+    $('nav').find('a[href$='+exitId+']').parent().removeClass('active');
+});
+$('.scrollspy').scrollSpy();
+// $.winSizeSpy().on('scrollSpy:winSize', funcy);
