@@ -329,7 +329,7 @@ html, body {
       .filter-bar ul.selected-one li:nth-child(1):hover {
         color: #fff; }
     .filter-bar ul.selected-one::after {
-      width: 80px; }
+      width: 62px; }
     .filter-bar ul.selected-two li:nth-child(1),
     .filter-bar ul.selected-two li:nth-child(2) {
       color: #fff; }
@@ -337,26 +337,29 @@ html, body {
       .filter-bar ul.selected-two li:nth-child(2):hover {
         color: #fff; }
     .filter-bar ul.selected-two::after {
-      width: 180px; }
+      width: 135px; }
     .filter-bar ul.selected-three li {
       color: #fff; }
       .filter-bar ul.selected-three li:hover {
         color: #fff; }
     .filter-bar ul.selected-three::after {
-      width: 270px; }
+      width: 243px; }
     .filter-bar ul li {
       font-family: "BG bold", sans-serif;
       font-size: 1.14286rem;
       color: #b8b8b8;
       display: inline-block;
-      padding: 7px 14px;
+      padding: 7px 5px;
       margin: 0 5px;
       transition: .2s ease;
       cursor: pointer;
-      width: 81px;
       text-align: center;
       z-index: 20;
       position: relative; }
+      .filter-bar ul li:first-child {
+        padding-left: 15px; }
+      .filter-bar ul li:last-child {
+        padding-right: 20px; }
       .filter-bar ul li:hover {
         color: #9013fe; }
   @media screen and (max-width: 960px) {

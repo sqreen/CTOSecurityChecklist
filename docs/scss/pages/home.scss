@@ -99,7 +99,7 @@
       }
 
       &::after {
-        width: 80px;
+        width: 62px;
       }
     }
 
@@ -114,7 +114,7 @@
       }
 
       &::after {
-        width: 180px;
+        width: 135px;
       }
     }
 
@@ -128,7 +128,7 @@
       }
 
       &::after {
-        width: 270px;
+        width: 243px;
       }
     }
 
@@ -137,14 +137,21 @@
     	font-size: rem-calc(16px);
     	color: $grey-light;
       display: inline-block;
-      padding: 7px 14px;
+      padding: 7px 5px;
       margin: 0 5px;
       transition: .2s ease;
       cursor: pointer;
-      width: 81px;
       text-align: center;
       z-index: 20;
       position: relative;
+
+      &:first-child {
+        padding-left: 15px;
+      }
+
+      &:last-child {
+        padding-right: 20px;
+      }
 
       &:hover {
         color: $violet;
