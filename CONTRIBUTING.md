@@ -10,7 +10,7 @@ Contributions to this Security Checklist are encouraged through pull-requests.
 	- item title
 	- company stage
 	- item details
-	- item relevant links
+	- item relevant links (minimum 1)
 - Keep the item details concise and simple.
 - Don't add more than three relevant links. 
 - The pull request and commit should have a useful title.
