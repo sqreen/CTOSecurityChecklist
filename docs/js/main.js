@@ -36,19 +36,6 @@ $('.filter-bar .above').on( 'click', function() {
   })
 });
 
-// Smooth scrolling
-//========================================
-$('nav a').click(function(e){
-  e.preventDefault();
-  $('nav li').removeClass('active');
-  $(this).parent().addClass('active');
-  var target = $(this).attr('href');
-
-  $('html, body').animate({
-    scrollTop: $(target).offset().top - 100
-  }, 1000);
-});
-
 // Check
 //========================================
 $('.check').click(function(){
@@ -109,14 +96,49 @@ $('.social a, .social-mob a').click(function(e){
 
 // Scrollspy
 //========================================
-$('.scrollspy').on('scrollSpy:enter', function() {
-    var enterId = $(this).attr('id');
-    $('nav').find('a[href$='+enterId+']').parent().addClass('active');
-});
+$(function() {
+  var lastId,
+      topMenu = $("nav ul"),
+      topMenuHeight = topMenu.outerHeight()+300,
+      // All list items
+      menuItems = topMenu.find("a"),
+      // Anchors corresponding to menu items
+      scrollItems = menuItems.map(function(){
+        var item = $($(this).attr("href"));
+        if (item.length) { return item; }
+      });
 
-$('.scrollspy').on('scrollSpy:exit', function() {
-    var exitId = $(this).attr('id');
-    $('nav').find('a[href$='+exitId+']').parent().removeClass('active');
+  // Bind click handler to menu items
+  // so we can get a fancy scroll animation
+  menuItems.click(function(e){
+    var href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top - 120;
+    $('html, body').stop().animate({
+        scrollTop: offsetTop
+    }, 1000);
+    e.preventDefault();
+  });
+
+  // Bind to scroll
+  $(window).scroll(function(){
+     // Get container scroll position
+     var fromTop = $(this).scrollTop()+topMenuHeight;
+
+     // Get id of current scroll item
+     var cur = scrollItems.map(function(){
+       if ($(this).offset().top < fromTop)
+         return this;
+     });
+     // Get the id of the current element
+     cur = cur[cur.length-1];
+     var id = cur && cur.length ? cur[0].id : "";
+
+     if (lastId !== id) {
+         lastId = id;
+         // Set/remove active class
+         menuItems
+           .parent().removeClass("active")
+           .end().filter("[href='#"+id+"']").parent().addClass("active");
+     }
+  });
 });
-$('.scrollspy').scrollSpy();
-// $.winSizeSpy().on('scrollSpy:winSize', funcy);
