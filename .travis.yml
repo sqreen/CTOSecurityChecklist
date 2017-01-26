@@ -1,4 +1,4 @@
-script: echo "OK"
+script: echo "No tests"
 deploy:
   provider: s3
   access_key_id:
