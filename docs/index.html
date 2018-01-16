@@ -1314,22 +1314,22 @@
           <div class="newsletter">
             <h4>Stay up to date with major changes in the list</h4>
             <div class="subtitle">Get notified about major updates to the list:</div>
-            <div id="mc_embed_signup">
-              <form action="//sqreen.us13.list-manage.com/subscribe/post?u=4c3491573cfb8d053d6b76c6a&amp;id=9db3111ac1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                  <div class="mc-field-group">
-                    <label for="mce-EMAIL">Email Address </label>
-                    <input type="email" placeholder="your.email@address.com" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                  </div>
-                  <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                  </div>
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4c3491573cfb8d053d6b76c6a_9db3111ac1" tabindex="-1" value=""></div>
-                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </div>
-              </form>
-            </div>
+            <form class="contact-form" action="https://www.getdrip.com/forms/66098348/submissions" method="post" data-drip-embedded-form="66098348">
+              <input type="hidden" name="fields[segmentId]" data-fields="segmentId">
+              <input type="hidden" name="fields[sqreenUserId]" data-fields="sqreenUserId">
+              <input type="hidden" name="fields[source]" value="The Saas CTO Security Checklist">
+              <input type="hidden" name="fields[medium]" value="Resources">
+              <input type="hidden" name="fields[resource_link]" value="https://s3-eu-west-1.amazonaws.com/sqreen-assets/whitepapers/SaaS+CTO+Security+Checklist.pdf">
+              <fieldset>
+                <input type="email" name="fields[email]" placeholder="Email address" required>
+                <input type="text" name="fields[name]" placeholder="Name" required>
+                <input type="text" name="fields[company]" placeholder="Company" required>
+              </fieldset>
+              <span class="text"></span>
+              <button class="submit-button" name="submit" data-drip-attribute="sign-up-button">
+                Submit
+              </button>
+            </form>
           </div>
           <footer>
             <span>A project by:</span>
@@ -1383,5 +1383,21 @@
     <script type="text/javascript" src="/js/vendors/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="/js/vendors/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
+    <script>
+      // Form for sales page
+      $(".contact-form .button").on('click', function() {
+        window.analytics.track('The Saas CTO Security Checklist', Object.assign(
+          {},
+          Qs.parse(location.search, { ignoreQueryPrefix: true }),
+          purser.fetch(),
+          {
+            label: $('.contact-form').attr('action'),
+            referrer: (window.sessionStorage && sessionStorage.getItem('referrer'))
+              ? sessionStorage.getItem('referrer')
+              : document.referrer
+          }));
+        $(".contact-form").submit();
+      })
+    </script>
   </body>
 </html>

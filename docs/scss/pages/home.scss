@@ -413,54 +413,41 @@ nav {
     margin-bottom: 10px;
   }
 
-  #mc_embed_signup {
-    font-size: 0;
-    label {
-      display: none;
-    }
-
-    .mc-field-group, #mc-embedded-subscribe, .clear {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    .mc-field-group {
-      width: calc(100% - 64px);
-      max-width: 244px;
-    }
-
-    #mce-EMAIL {
+  fieldset {
+    input {
       font-family: "BG medium", sans-serif;
-    	font-size: rem-calc(16px);
-    	background-color: $grey-lighter;
+      font-size: rem-calc(16px);
+      background-color: $grey-lighter;
       border: none;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
+      border-radius: 4px;
       padding: 8px 18px;
       outline: none;
+      display: block;
+      margin-bottom: 10px;
+      flex: none;
+      max-width: 250px;
       width: 100%;
-      display: inline-block;
-      height: 39px;
     }
+  }
 
-    #mc-embedded-subscribe {
-	    background-color: $violet;
-      font-family: "BG bold";
-    	font-size: rem-calc(12px);
-    	color: $white;
-      text-transform: uppercase;
-      border: none;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-      padding: 0 18px;
-      position: relative;
-      height: 39px;
-      cursor: pointer;
-      transition: .2s ease;
+  .submit-button {
+    background-color: $violet;
+    font-family: "BG bold";
+    font-size: rem-calc(12px);
+    color: $white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 18px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: .2s ease;
+    margin-bottom: 10px;
+    flex: none;
 
-      &:hover {
-        background-color: lighten($violet, 5%);
-      }
+    &:hover {
+      background-color: lighten($violet, 5%);
     }
   }
 
