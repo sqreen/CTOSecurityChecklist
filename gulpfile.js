@@ -21,17 +21,9 @@ gulp.task('styles', function () {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('scripts', function (cb) {
-  pump([
-    gulp.src(['./docs/js/main.js', './docs/js/marked.js', './docs/js/jquery-3.3.1.min.js']),
-    concat('docs.js'),
-    uglify(),
-    rename({ suffix: '.min' }),
-    gulp.dest('./build/js/'),
-    browserSync.reload({ stream: true }),
-  ],
-    cb
-  );
+gulp.task('scripts', function () {
+  gulp.src('./docs/js/**/*.*')
+    .pipe(gulp.dest('./build/js'));
 });
 
 gulp.task('serve', function () {
@@ -48,17 +40,18 @@ gulp.task('html', function () {
     .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('md', function () {
-  gulp.src('./docs/markdown-content.md')
-    .pipe(gulp.dest('./build/'));
-});
 
 gulp.task('img', function () {
-  gulp.src('./docs/img/**/*.*')
-    .pipe(gulp.dest('./build/img'));
+  gulp.src('./docs/images/**/*.*')
+    .pipe(gulp.dest('./build/images'));
 });
 
-gulp.task('build', ['html', 'md', 'styles', 'scripts', 'img'])
+gulp.task('fonts', function () {
+  gulp.src('./docs/fonts/**/*.*')
+    .pipe(gulp.dest('./build/fonts'));
+});
+
+gulp.task('build', ['html', 'styles', 'scripts', 'img', 'fonts'])
 
 // Run all Gulp tasks and serve application
 gulp.task('default', ['serve', 'build'], function () {

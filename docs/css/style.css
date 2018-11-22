@@ -51,29 +51,29 @@ table {
 
 @font-face {
   font-family: 'BG light';
-  src: url("/fonts/hinted-BrandonGrotesque-Light.eot");
-  src: local("Brandon Grotesque Light"), local("BrandonGrotesque-Light"), url("/fonts/hinted-BrandonGrotesque-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/hinted-BrandonGrotesque-Light.woff2") format("woff2"), url("/fonts/hinted-BrandonGrotesque-Light.woff") format("woff"), url("/fonts/hinted-BrandonGrotesque-Light.ttf") format("truetype");
+  src: url("../fonts/hinted-BrandonGrotesque-Light.eot");
+  src: local("Brandon Grotesque Light"), local("BrandonGrotesque-Light"), url("../fonts/hinted-BrandonGrotesque-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-BrandonGrotesque-Light.woff2") format("woff2"), url("../fonts/hinted-BrandonGrotesque-Light.woff") format("woff"), url("../fonts/hinted-BrandonGrotesque-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'BG medium';
-  src: url("/fonts/hinted-BrandonGrotesque-Medium.eot");
-  src: local("Brandon Grotesque Medium"), local("BrandonGrotesque-Medium"), url("/fonts/hinted-BrandonGrotesque-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/hinted-BrandonGrotesque-Medium.woff2") format("woff2"), url("/fonts/hinted-BrandonGrotesque-Medium.woff") format("woff"), url("/fonts/hinted-BrandonGrotesque-Medium.ttf") format("truetype");
+  src: url("../fonts/hinted-BrandonGrotesque-Medium.eot");
+  src: local("Brandon Grotesque Medium"), local("BrandonGrotesque-Medium"), url("../fonts/hinted-BrandonGrotesque-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-BrandonGrotesque-Medium.woff2") format("woff2"), url("../fonts/hinted-BrandonGrotesque-Medium.woff") format("woff"), url("../fonts/hinted-BrandonGrotesque-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'BG regular';
-  src: url("/fonts/hinted-BrandonGrotesque-Regular.eot");
-  src: local("Brandon Grotesque Regular"), local("BrandonGrotesque-Regular"), url("/fonts/hinted-BrandonGrotesque-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/hinted-BrandonGrotesque-Regular.woff2") format("woff2"), url("/fonts/hinted-BrandonGrotesque-Regular.woff") format("woff"), url("/fonts/hinted-BrandonGrotesque-Regular.ttf") format("truetype");
+  src: url("../fonts/hinted-BrandonGrotesque-Regular.eot");
+  src: local("Brandon Grotesque Regular"), local("BrandonGrotesque-Regular"), url("../fonts/hinted-BrandonGrotesque-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-BrandonGrotesque-Regular.woff2") format("woff2"), url("../fonts/hinted-BrandonGrotesque-Regular.woff") format("woff"), url("../fonts/hinted-BrandonGrotesque-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'BG bold';
-  src: url("/fonts/hinted-BrandonGrotesque-Bold.eot");
-  src: local("Brandon Grotesque Bold"), local("BrandonGrotesque-Bold"), url("/fonts/hinted-BrandonGrotesque-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/hinted-BrandonGrotesque-Bold.woff2") format("woff2"), url("/fonts/hinted-BrandonGrotesque-Bold.woff") format("woff"), url("/fonts/hinted-BrandonGrotesque-Bold.ttf") format("truetype");
+  src: url("../fonts/hinted-BrandonGrotesque-Bold.eot");
+  src: local("Brandon Grotesque Bold"), local("BrandonGrotesque-Bold"), url("../fonts/hinted-BrandonGrotesque-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/hinted-BrandonGrotesque-Bold.woff2") format("woff2"), url("../fonts/hinted-BrandonGrotesque-Bold.woff") format("woff"), url("../fonts/hinted-BrandonGrotesque-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
 
