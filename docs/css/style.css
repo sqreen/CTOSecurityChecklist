@@ -262,10 +262,6 @@ html, body {
       display: block;
       margin: 0 auto; } }
 
-*::-moz-selection {
-  background-color: #9013fe;
-  color: #fff; }
-
 *::selection {
   background-color: #9013fe;
   color: #fff; }
