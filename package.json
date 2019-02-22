@@ -1,0 +1,23 @@
+{
+  "name": "CTOSecurityChecklist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "serve": "gulp serve"
+  },
+  "author": "Sqreen",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "^2.3.2",
+    "gulp-useref": "*",
+    "netlify-cli": "*"
+  }
+}
